@@ -187,6 +187,7 @@
   ]
 }
 </script>
+<script>if('IntersectionObserver'in window)document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap">
@@ -223,8 +224,8 @@ body > x-dc h1,.pg > div > section:first-of-type h1,.pg > div > section:first-of
 
 
 @media (hover:hover) and (prefers-reduced-motion:no-preference){
-.acard:hover,.hcard:hover,.gbox:hover,.scard:hover{animation:card-breath 1.4s cubic-bezier(.4,0,.2,1) 1}
-@keyframes card-breath{0%{transform:translateY(0) scale(1)}28%{transform:translateY(-4px) scale(1.016)}48%{transform:translateY(-4px) scale(1)}68%{transform:translateY(-4px) scale(1.008)}100%{transform:translateY(-4px) scale(1)}}
+.acard:hover,.hcard:hover,.gbox:hover,.scard:hover,.tcard:hover,.pcard:hover{animation:card-breath .8s ease-in-out 1 !important;animation-timeline:auto !important;animation-range:normal !important}
+@keyframes card-breath{0%{scale:1}15%{scale:1.03}30%{scale:1}46%{scale:1.018}62%,100%{scale:1}}
 }
 
 
@@ -237,7 +238,7 @@ body > x-dc h1,.pg > div > section:first-of-type h1,.pg > div > section:first-of
 @media (prefers-reduced-motion:no-preference){
 .btn{animation:btn-load .95s cubic-bezier(.2,.7,.2,1) .35s backwards}
 @supports (animation-timeline:view()){
-.btn{animation:btn-load .95s cubic-bezier(.2,.7,.2,1) .35s backwards,btn-scroll linear backwards;animation-timeline:auto,view();animation-range:normal,cover 2% cover 30%}
+.btn{animation:btn-load .95s cubic-bezier(.2,.7,.2,1) .35s backwards,btn-scroll linear backwards;animation-timeline:auto,view();animation-range:normal,cover 2% cover 30%}:is(.pg > div,.rt,.root) > section:first-of-type .btn{animation:btn-load .95s cubic-bezier(.2,.7,.2,1) .35s backwards;animation-timeline:auto;animation-range:normal}
 }
 @keyframes btn-load{from{opacity:0;transform:translateX(-36px);clip-path:inset(-24px calc(100% + 24px) -24px -24px)}to{opacity:1;transform:none;clip-path:inset(-24px -24px -24px -24px)}}
 @keyframes btn-scroll{from{opacity:0;transform:translateX(-36px);clip-path:inset(-24px calc(100% + 24px) -24px -24px)}to{opacity:1;transform:none;clip-path:inset(-24px -24px -24px -24px)}}
@@ -255,11 +256,11 @@ body > x-dc h1,.pg > div > section:first-of-type h1,.pg > div > section:first-of
 .hrow:nth-child(1),.hrow:nth-child(1)::after,.hrow:nth-child(1)>summary{animation-range:cover 10% cover 24%}
 .hrow:nth-child(2),.hrow:nth-child(2)::after,.hrow:nth-child(2)>summary{animation-range:cover 15% cover 29%}
 .hrow:nth-child(3),.hrow:nth-child(3)::after,.hrow:nth-child(3)>summary{animation-range:cover 20% cover 34%}
-.hrow:nth-child(4),.hrow:nth-child(4)::after,.hrow:nth-child(4)>summary{animation-range:cover 25% cover 39%}
-.hrow:nth-child(5),.hrow:nth-child(5)::after,.hrow:nth-child(5)>summary{animation-range:cover 30% cover 44%}
-.hrow:nth-child(6),.hrow:nth-child(6)::after,.hrow:nth-child(6)>summary{animation-range:cover 35% cover 49%}
-.hrow:nth-child(7),.hrow:nth-child(7)::after,.hrow:nth-child(7)>summary{animation-range:cover 40% cover 54%}
-.hrow:nth-child(8),.hrow:nth-child(8)::after,.hrow:nth-child(8)>summary{animation-range:cover 45% cover 59%}
+.hrow:nth-child(4),.hrow:nth-child(4)::after,.hrow:nth-child(4)>summary{animation-range:cover 15% cover 23%}
+.hrow:nth-child(5),.hrow:nth-child(5)::after,.hrow:nth-child(5)>summary{animation-range:cover 18% cover 26%}
+.hrow:nth-child(6),.hrow:nth-child(6)::after,.hrow:nth-child(6)>summary{animation-range:cover 21% cover 29%}
+.hrow:nth-child(7),.hrow:nth-child(7)::after,.hrow:nth-child(7)>summary{animation-range:cover 24% cover 32%}
+.hrow:nth-child(8),.hrow:nth-child(8)::after,.hrow:nth-child(8)>summary{animation-range:cover 27% cover 35%}
 @keyframes hl-line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes hl-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 }}
@@ -275,8 +276,8 @@ body > x-dc h1,.pg > div > section:first-of-type h1,.pg > div > section:first-of
 .fitli>*{animation:fit-in linear both;animation-timeline:view()}
 .fitli:nth-child(1),.fitli:nth-child(1)>*,.fitli:nth-child(1)::before{animation-range:cover 8% cover 30%}
 .fitli:nth-child(2),.fitli:nth-child(2)>*,.fitli:nth-child(2)::before{animation-range:cover 14% cover 36%}
-.fitli:nth-child(3),.fitli:nth-child(3)>*,.fitli:nth-child(3)::before,.fitli:nth-child(3)::after{animation-range:cover 20% cover 42%}
-.fitwant{animation:fit-block linear both;animation-timeline:view();animation-range:cover 30% cover 52%}
+.fitli:nth-child(3),.fitli:nth-child(3)>*,.fitli:nth-child(3)::before,.fitli:nth-child(3)::after{animation-range:cover 12% cover 25%}
+.fitwant{animation:fit-block linear both;animation-timeline:view();animation-range:cover 18% cover 31%}
 @keyframes fit-line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes fit-in{from{opacity:0;transform:translateX(-12px)}to{opacity:1;transform:none}}
 @keyframes fit-block{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
@@ -387,6 +388,7 @@ button{font:inherit}
 @media (prefers-reduced-motion:no-preference){.hline{background-size:0% 1px;animation:hline-grow 1.2s cubic-bezier(.22,.61,.36,1) .3s forwards}}
 @keyframes hline-grow{to{background-size:100% 1px}}
 
+.acard,.hcard,.tcard,.scard,.pcard,.gbox{transition:box-shadow .25s ease,transform .25s ease}
 </style>
 <style media="(min-width: 600px) and (max-width: 1099.98px)">
 
@@ -502,8 +504,8 @@ button{font:inherit}
 .rt>.band:nth-last-child(2){flex:1 1 auto}
 
 @media (hover:hover) and (prefers-reduced-motion:no-preference){
-.acard:hover,.hcard:hover,.gbox:hover,.scard:hover{animation:card-breath 1.4s cubic-bezier(.4,0,.2,1) 1}
-@keyframes card-breath{0%{transform:translateY(0) scale(1)}28%{transform:translateY(-4px) scale(1.016)}48%{transform:translateY(-4px) scale(1)}68%{transform:translateY(-4px) scale(1.008)}100%{transform:translateY(-4px) scale(1)}}
+.acard:hover,.hcard:hover,.gbox:hover,.scard:hover,.tcard:hover,.pcard:hover{animation:card-breath .8s ease-in-out 1 !important;animation-timeline:auto !important;animation-range:normal !important}
+@keyframes card-breath{0%{scale:1}15%{scale:1.03}30%{scale:1}46%{scale:1.018}62%,100%{scale:1}}
 }
 
 
@@ -516,7 +518,7 @@ button{font:inherit}
 @media (prefers-reduced-motion:no-preference){
 .btn{animation:btn-load .95s cubic-bezier(.2,.7,.2,1) .35s backwards}
 @supports (animation-timeline:view()){
-.btn{animation:btn-load .95s cubic-bezier(.2,.7,.2,1) .35s backwards,btn-scroll linear backwards;animation-timeline:auto,view();animation-range:normal,cover 2% cover 30%}
+.btn{animation:btn-load .95s cubic-bezier(.2,.7,.2,1) .35s backwards,btn-scroll linear backwards;animation-timeline:auto,view();animation-range:normal,cover 2% cover 30%}:is(.pg > div,.rt,.root) > section:first-of-type .btn{animation:btn-load .95s cubic-bezier(.2,.7,.2,1) .35s backwards;animation-timeline:auto;animation-range:normal}
 }
 @keyframes btn-load{from{opacity:0;transform:translateX(-36px);clip-path:inset(-24px calc(100% + 24px) -24px -24px)}to{opacity:1;transform:none;clip-path:inset(-24px -24px -24px -24px)}}
 @keyframes btn-scroll{from{opacity:0;transform:translateX(-36px);clip-path:inset(-24px calc(100% + 24px) -24px -24px)}to{opacity:1;transform:none;clip-path:inset(-24px -24px -24px -24px)}}
@@ -534,11 +536,11 @@ button{font:inherit}
 .hrow:nth-child(1),.hrow:nth-child(1)::after,.hrow:nth-child(1)>summary{animation-range:cover 10% cover 24%}
 .hrow:nth-child(2),.hrow:nth-child(2)::after,.hrow:nth-child(2)>summary{animation-range:cover 15% cover 29%}
 .hrow:nth-child(3),.hrow:nth-child(3)::after,.hrow:nth-child(3)>summary{animation-range:cover 20% cover 34%}
-.hrow:nth-child(4),.hrow:nth-child(4)::after,.hrow:nth-child(4)>summary{animation-range:cover 25% cover 39%}
-.hrow:nth-child(5),.hrow:nth-child(5)::after,.hrow:nth-child(5)>summary{animation-range:cover 30% cover 44%}
-.hrow:nth-child(6),.hrow:nth-child(6)::after,.hrow:nth-child(6)>summary{animation-range:cover 35% cover 49%}
-.hrow:nth-child(7),.hrow:nth-child(7)::after,.hrow:nth-child(7)>summary{animation-range:cover 40% cover 54%}
-.hrow:nth-child(8),.hrow:nth-child(8)::after,.hrow:nth-child(8)>summary{animation-range:cover 45% cover 59%}
+.hrow:nth-child(4),.hrow:nth-child(4)::after,.hrow:nth-child(4)>summary{animation-range:cover 15% cover 23%}
+.hrow:nth-child(5),.hrow:nth-child(5)::after,.hrow:nth-child(5)>summary{animation-range:cover 18% cover 26%}
+.hrow:nth-child(6),.hrow:nth-child(6)::after,.hrow:nth-child(6)>summary{animation-range:cover 21% cover 29%}
+.hrow:nth-child(7),.hrow:nth-child(7)::after,.hrow:nth-child(7)>summary{animation-range:cover 24% cover 32%}
+.hrow:nth-child(8),.hrow:nth-child(8)::after,.hrow:nth-child(8)>summary{animation-range:cover 27% cover 35%}
 @keyframes hl-line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes hl-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 }}
@@ -554,8 +556,8 @@ button{font:inherit}
 .fitli>*{animation:fit-in linear both;animation-timeline:view()}
 .fitli:nth-child(1),.fitli:nth-child(1)>*,.fitli:nth-child(1)::before{animation-range:cover 8% cover 30%}
 .fitli:nth-child(2),.fitli:nth-child(2)>*,.fitli:nth-child(2)::before{animation-range:cover 14% cover 36%}
-.fitli:nth-child(3),.fitli:nth-child(3)>*,.fitli:nth-child(3)::before,.fitli:nth-child(3)::after{animation-range:cover 20% cover 42%}
-.fitwant{animation:fit-block linear both;animation-timeline:view();animation-range:cover 30% cover 52%}
+.fitli:nth-child(3),.fitli:nth-child(3)>*,.fitli:nth-child(3)::before,.fitli:nth-child(3)::after{animation-range:cover 12% cover 25%}
+.fitwant{animation:fit-block linear both;animation-timeline:view();animation-range:cover 18% cover 31%}
 @keyframes fit-line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes fit-in{from{opacity:0;transform:translateX(-12px)}to{opacity:1;transform:none}}
 @keyframes fit-block{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
@@ -597,6 +599,7 @@ body > x-dc h1,.pg > div > section:first-of-type h1,.pg > div > section:first-of
 }}
 
 @media (prefers-reduced-motion:no-preference){.rt>section:first-of-type h1,.rt>section:first-of-type h2,.rt h1.h1,.rt .mh{animation:mrise 1s cubic-bezier(.2,.7,.2,1) .1s backwards}}
+.acard,.hcard,.tcard,.scard,.pcard,.gbox{transition:box-shadow .25s ease,transform .25s ease}
 </style>
 <style media="(max-width: 599.98px)">
 
@@ -712,8 +715,8 @@ button{font:inherit}
 .rt>.band:nth-last-child(2){flex:1 1 auto}
 
 @media (hover:hover) and (prefers-reduced-motion:no-preference){
-.acard:hover,.hcard:hover,.gbox:hover,.scard:hover{animation:card-breath 1.4s cubic-bezier(.4,0,.2,1) 1}
-@keyframes card-breath{0%{transform:translateY(0) scale(1)}28%{transform:translateY(-4px) scale(1.016)}48%{transform:translateY(-4px) scale(1)}68%{transform:translateY(-4px) scale(1.008)}100%{transform:translateY(-4px) scale(1)}}
+.acard:hover,.hcard:hover,.gbox:hover,.scard:hover,.tcard:hover,.pcard:hover{animation:card-breath .8s ease-in-out 1 !important;animation-timeline:auto !important;animation-range:normal !important}
+@keyframes card-breath{0%{scale:1}15%{scale:1.03}30%{scale:1}46%{scale:1.018}62%,100%{scale:1}}
 }
 
 
@@ -726,7 +729,7 @@ button{font:inherit}
 @media (prefers-reduced-motion:no-preference){
 .btn{animation:btn-load .95s cubic-bezier(.2,.7,.2,1) .35s backwards}
 @supports (animation-timeline:view()){
-.btn{animation:btn-load .95s cubic-bezier(.2,.7,.2,1) .35s backwards,btn-scroll linear backwards;animation-timeline:auto,view();animation-range:normal,cover 2% cover 30%}
+.btn{animation:btn-load .95s cubic-bezier(.2,.7,.2,1) .35s backwards,btn-scroll linear backwards;animation-timeline:auto,view();animation-range:normal,cover 2% cover 30%}:is(.pg > div,.rt,.root) > section:first-of-type .btn{animation:btn-load .95s cubic-bezier(.2,.7,.2,1) .35s backwards;animation-timeline:auto;animation-range:normal}
 }
 @keyframes btn-load{from{opacity:0;transform:translateX(-36px);clip-path:inset(-24px calc(100% + 24px) -24px -24px)}to{opacity:1;transform:none;clip-path:inset(-24px -24px -24px -24px)}}
 @keyframes btn-scroll{from{opacity:0;transform:translateX(-36px);clip-path:inset(-24px calc(100% + 24px) -24px -24px)}to{opacity:1;transform:none;clip-path:inset(-24px -24px -24px -24px)}}
@@ -744,11 +747,11 @@ button{font:inherit}
 .hrow:nth-child(1),.hrow:nth-child(1)::after,.hrow:nth-child(1)>summary{animation-range:cover 10% cover 24%}
 .hrow:nth-child(2),.hrow:nth-child(2)::after,.hrow:nth-child(2)>summary{animation-range:cover 15% cover 29%}
 .hrow:nth-child(3),.hrow:nth-child(3)::after,.hrow:nth-child(3)>summary{animation-range:cover 20% cover 34%}
-.hrow:nth-child(4),.hrow:nth-child(4)::after,.hrow:nth-child(4)>summary{animation-range:cover 25% cover 39%}
-.hrow:nth-child(5),.hrow:nth-child(5)::after,.hrow:nth-child(5)>summary{animation-range:cover 30% cover 44%}
-.hrow:nth-child(6),.hrow:nth-child(6)::after,.hrow:nth-child(6)>summary{animation-range:cover 35% cover 49%}
-.hrow:nth-child(7),.hrow:nth-child(7)::after,.hrow:nth-child(7)>summary{animation-range:cover 40% cover 54%}
-.hrow:nth-child(8),.hrow:nth-child(8)::after,.hrow:nth-child(8)>summary{animation-range:cover 45% cover 59%}
+.hrow:nth-child(4),.hrow:nth-child(4)::after,.hrow:nth-child(4)>summary{animation-range:cover 15% cover 23%}
+.hrow:nth-child(5),.hrow:nth-child(5)::after,.hrow:nth-child(5)>summary{animation-range:cover 18% cover 26%}
+.hrow:nth-child(6),.hrow:nth-child(6)::after,.hrow:nth-child(6)>summary{animation-range:cover 21% cover 29%}
+.hrow:nth-child(7),.hrow:nth-child(7)::after,.hrow:nth-child(7)>summary{animation-range:cover 24% cover 32%}
+.hrow:nth-child(8),.hrow:nth-child(8)::after,.hrow:nth-child(8)>summary{animation-range:cover 27% cover 35%}
 @keyframes hl-line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes hl-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 }}
@@ -764,8 +767,8 @@ button{font:inherit}
 .fitli>*{animation:fit-in linear both;animation-timeline:view()}
 .fitli:nth-child(1),.fitli:nth-child(1)>*,.fitli:nth-child(1)::before{animation-range:cover 8% cover 30%}
 .fitli:nth-child(2),.fitli:nth-child(2)>*,.fitli:nth-child(2)::before{animation-range:cover 14% cover 36%}
-.fitli:nth-child(3),.fitli:nth-child(3)>*,.fitli:nth-child(3)::before,.fitli:nth-child(3)::after{animation-range:cover 20% cover 42%}
-.fitwant{animation:fit-block linear both;animation-timeline:view();animation-range:cover 30% cover 52%}
+.fitli:nth-child(3),.fitli:nth-child(3)>*,.fitli:nth-child(3)::before,.fitli:nth-child(3)::after{animation-range:cover 12% cover 25%}
+.fitwant{animation:fit-block linear both;animation-timeline:view();animation-range:cover 18% cover 31%}
 @keyframes fit-line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes fit-in{from{opacity:0;transform:translateX(-12px)}to{opacity:1;transform:none}}
 @keyframes fit-block{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
@@ -807,11 +810,12 @@ body > x-dc h1,.pg > div > section:first-of-type h1,.pg > div > section:first-of
 }}
 
 @media (prefers-reduced-motion:no-preference){.rt>section:first-of-type h1,.rt>section:first-of-type h2,.rt h1.h1,.rt .mh{animation:mrise 1s cubic-bezier(.2,.7,.2,1) .1s backwards}}
+.acard,.hcard,.tcard,.scard,.pcard,.gbox{transition:box-shadow .25s ease,transform .25s ease}
 </style>
 </head>
 <body>
 <div class="pg" id="pg" data-v="d">
-<div class="root" style="--blue: #1F2CFF; width: 100%; min-width: 1440px; min-height: 6216px; position: relative; display: flex; flex-direction: column; background-color: #F8F4EC; color: #0B0B0C; font-family: 'PulsinInter', system-ui, sans-serif; font-size: 16px; line-height: 1">
+<div class="root" style="--blue: #1F2CFF; width: 100%; min-width: 1440px; min-height: 6280px; position: relative; display: flex; flex-direction: column; background-color: #F8F4EC; color: #0B0B0C; font-family: 'PulsinInter', system-ui, sans-serif; font-size: 16px; line-height: 1">
 
 <!-- HERO -->
 <section id="top" class="hero" style="position: relative; height: 800px; display: flex; flex-direction: column; justify-content: space-between; overflow: clip; color: #F8F4EC; background-color: #DCC8F5; flex-shrink: 0">
@@ -986,7 +990,7 @@ Onboard Your Space</a>
 </section>
 
 <!-- LIST -->
-<section class="pad sec" style="padding-top: 0; padding-bottom: 112px; display: flex; flex-direction: column; gap: 48px; flex-shrink: 0">
+<section class="pad sec" style="padding-top: 0; padding-bottom: 176px; display: flex; flex-direction: column; gap: 48px; flex-shrink: 0">
 <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 48px; padding-top: 48px; border-top: 1px solid rgba(11,11,12,.13)">
 <h2 id="list" style="margin: 0; max-width: 16ch; font-family: 'VioletSans', sans-serif; text-transform: uppercase; font-weight: 400; font-size: 61px; line-height: 1">Every hub in the network</h2>
 </div>
@@ -1376,7 +1380,7 @@ Onboard Your Space</a>
 </section>
 
 <!-- LIST -->
-<section class="pad sec" style="padding-top: 0; padding-bottom: 112px; display: flex; flex-direction: column; gap: 48px; flex-shrink: 0">
+<section class="pad sec" style="padding-top: 0; padding-bottom: 176px; display: flex; flex-direction: column; gap: 48px; flex-shrink: 0">
 <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 48px; padding-top: 48px; border-top: 1px solid rgba(11,11,12,.13)">
 <h2 id="list" style="margin: 0; max-width: 16ch; font-family: 'VioletSans', sans-serif; text-transform: uppercase; font-weight: 400; font-size: 61px; line-height: 1">Every hub in the network</h2>
 </div>
@@ -1718,7 +1722,7 @@ Onboard Your Space</a>
 </section>
 
 <!-- LIST -->
-<section class="pad sec" style="padding-top: 0; padding-bottom: 112px; display: flex; flex-direction: column; gap: 48px; flex-shrink: 0">
+<section class="pad sec" style="padding-top: 0; padding-bottom: 176px; display: flex; flex-direction: column; gap: 48px; flex-shrink: 0">
 <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 48px; padding-top: 48px; border-top: 1px solid rgba(11,11,12,.13)">
 <h2 id="list" style="margin: 0; max-width: 16ch; font-family: 'VioletSans', sans-serif; text-transform: uppercase; font-weight: 400; font-size: 61px; line-height: 1">Every hub in the network</h2>
 </div>
@@ -1885,6 +1889,6 @@ Onboard Your Space</a>
 </footer>
 
 </div></template>
-<script>(function(){var W={d:1440,t:600,p:320},cur='d',pg=document.getElementById('pg'),keep={};function pick(w){return w>=1100?'d':w>=600?'t':'p'}function fit(){var w=document.documentElement.clientWidth,v=pick(w);if(v!==cur){var f=document.createDocumentFragment();while(pg.firstChild)f.appendChild(pg.firstChild);keep[cur]=f;pg.appendChild(keep[v]||document.getElementById('v-'+v).content.cloneNode(true));cur=v;pg.dataset.v=v}var z=Math.min(1,w/W[v]);pg.style.zoom=z<1?z:''}document.addEventListener('click',function(e){document.querySelectorAll('.mnav[open]').forEach(function(d){if(!d.contains(e.target))d.open=false})});fit();var r;addEventListener('resize',function(){cancelAnimationFrame(r);r=requestAnimationFrame(fit)})})();</script>
+<script>(function(){var W={d:1440,t:600,p:320},cur='d',pg=document.getElementById('pg'),keep={};function pick(w){return w>=1100?'d':w>=600?'t':'p'}function fit(){var w=document.documentElement.clientWidth,v=pick(w);if(v!==cur){var f=document.createDocumentFragment();while(pg.firstChild)f.appendChild(pg.firstChild);keep[cur]=f;pg.appendChild(keep[v]||document.getElementById('v-'+v).content.cloneNode(true));cur=v;pg.dataset.v=v;if(typeof watch==='function')watch()}var z=Math.min(1,w/W[v]);pg.style.zoom=z<1?z:''}document.addEventListener('click',function(e){document.querySelectorAll('.mnav[open]').forEach(function(d){if(!d.contains(e.target))d.open=false})});var io='IntersectionObserver' in window&&new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target)}})},{threshold:.35});function watch(){if(io)pg.querySelectorAll('.dotreveal:not(.is-in)').forEach(function(el){io.observe(el)})}fit();watch();var r;addEventListener('resize',function(){cancelAnimationFrame(r);r=requestAnimationFrame(fit)})})();</script>
 </body>
 </html>

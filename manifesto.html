@@ -68,6 +68,7 @@
   ]
 }
 </script>
+<script>if('IntersectionObserver'in window)document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap">
@@ -106,7 +107,7 @@ button{font:inherit}
 @media (prefers-reduced-motion:no-preference){
 .btn{animation:btn-load .95s cubic-bezier(.2,.7,.2,1) .35s backwards}
 @supports (animation-timeline:view()){
-.btn{animation:btn-load .95s cubic-bezier(.2,.7,.2,1) .35s backwards,btn-scroll linear backwards;animation-timeline:auto,view();animation-range:normal,cover 2% cover 30%}
+.btn{animation:btn-load .95s cubic-bezier(.2,.7,.2,1) .35s backwards,btn-scroll linear backwards;animation-timeline:auto,view();animation-range:normal,cover 2% cover 30%}:is(.pg > div,.rt,.root) > section:first-of-type .btn{animation:btn-load .95s cubic-bezier(.2,.7,.2,1) .35s backwards;animation-timeline:auto;animation-range:normal}
 }
 @keyframes btn-load{from{opacity:0;transform:translateX(-36px);clip-path:inset(-24px calc(100% + 24px) -24px -24px)}to{opacity:1;transform:none;clip-path:inset(-24px -24px -24px -24px)}}
 @keyframes btn-scroll{from{opacity:0;transform:translateX(-36px);clip-path:inset(-24px calc(100% + 24px) -24px -24px)}to{opacity:1;transform:none;clip-path:inset(-24px -24px -24px -24px)}}
@@ -298,7 +299,7 @@ figure{margin:0;display:flex;flex-direction:column;gap:10px}figcaption{font-size
 @media (prefers-reduced-motion:no-preference){
 .btn{animation:btn-load .95s cubic-bezier(.2,.7,.2,1) .35s backwards}
 @supports (animation-timeline:view()){
-.btn{animation:btn-load .95s cubic-bezier(.2,.7,.2,1) .35s backwards,btn-scroll linear backwards;animation-timeline:auto,view();animation-range:normal,cover 2% cover 30%}
+.btn{animation:btn-load .95s cubic-bezier(.2,.7,.2,1) .35s backwards,btn-scroll linear backwards;animation-timeline:auto,view();animation-range:normal,cover 2% cover 30%}:is(.pg > div,.rt,.root) > section:first-of-type .btn{animation:btn-load .95s cubic-bezier(.2,.7,.2,1) .35s backwards;animation-timeline:auto;animation-range:normal}
 }
 @keyframes btn-load{from{opacity:0;transform:translateX(-36px);clip-path:inset(-24px calc(100% + 24px) -24px -24px)}to{opacity:1;transform:none;clip-path:inset(-24px -24px -24px -24px)}}
 @keyframes btn-scroll{from{opacity:0;transform:translateX(-36px);clip-path:inset(-24px calc(100% + 24px) -24px -24px)}to{opacity:1;transform:none;clip-path:inset(-24px -24px -24px -24px)}}
@@ -492,7 +493,7 @@ figure{margin:0;display:flex;flex-direction:column;gap:10px}figcaption{font-size
 @media (prefers-reduced-motion:no-preference){
 .btn{animation:btn-load .95s cubic-bezier(.2,.7,.2,1) .35s backwards}
 @supports (animation-timeline:view()){
-.btn{animation:btn-load .95s cubic-bezier(.2,.7,.2,1) .35s backwards,btn-scroll linear backwards;animation-timeline:auto,view();animation-range:normal,cover 2% cover 30%}
+.btn{animation:btn-load .95s cubic-bezier(.2,.7,.2,1) .35s backwards,btn-scroll linear backwards;animation-timeline:auto,view();animation-range:normal,cover 2% cover 30%}:is(.pg > div,.rt,.root) > section:first-of-type .btn{animation:btn-load .95s cubic-bezier(.2,.7,.2,1) .35s backwards;animation-timeline:auto;animation-range:normal}
 }
 @keyframes btn-load{from{opacity:0;transform:translateX(-36px);clip-path:inset(-24px calc(100% + 24px) -24px -24px)}to{opacity:1;transform:none;clip-path:inset(-24px -24px -24px -24px)}}
 @keyframes btn-scroll{from{opacity:0;transform:translateX(-36px);clip-path:inset(-24px calc(100% + 24px) -24px -24px)}to{opacity:1;transform:none;clip-path:inset(-24px -24px -24px -24px)}}
@@ -672,6 +673,6 @@ Onboard Your Space</a></div>
 <div class="fbot"><img loading="lazy" decoding="async" src="images/pulsin-network-logo.webp" alt="Pulsin Network" style="width:86px;display:block"><span>© Pulsin Network 2026</span></div>
 </footer>
 </div></template>
-<script>(function(){var W={d:1440,t:600,p:320},cur='d',pg=document.getElementById('pg'),keep={};function pick(w){return w>=1100?'d':w>=600?'t':'p'}function fit(){var w=document.documentElement.clientWidth,v=pick(w);if(v!==cur){var f=document.createDocumentFragment();while(pg.firstChild)f.appendChild(pg.firstChild);keep[cur]=f;pg.appendChild(keep[v]||document.getElementById('v-'+v).content.cloneNode(true));cur=v;pg.dataset.v=v}var z=Math.min(1,w/W[v]);pg.style.zoom=z<1?z:''}document.addEventListener('click',function(e){document.querySelectorAll('.mnav[open]').forEach(function(d){if(!d.contains(e.target))d.open=false})});fit();var r;addEventListener('resize',function(){cancelAnimationFrame(r);r=requestAnimationFrame(fit)})})();</script>
+<script>(function(){var W={d:1440,t:600,p:320},cur='d',pg=document.getElementById('pg'),keep={};function pick(w){return w>=1100?'d':w>=600?'t':'p'}function fit(){var w=document.documentElement.clientWidth,v=pick(w);if(v!==cur){var f=document.createDocumentFragment();while(pg.firstChild)f.appendChild(pg.firstChild);keep[cur]=f;pg.appendChild(keep[v]||document.getElementById('v-'+v).content.cloneNode(true));cur=v;pg.dataset.v=v;if(typeof watch==='function')watch()}var z=Math.min(1,w/W[v]);pg.style.zoom=z<1?z:''}document.addEventListener('click',function(e){document.querySelectorAll('.mnav[open]').forEach(function(d){if(!d.contains(e.target))d.open=false})});var io='IntersectionObserver' in window&&new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target)}})},{threshold:.35});function watch(){if(io)pg.querySelectorAll('.dotreveal:not(.is-in)').forEach(function(el){io.observe(el)})}fit();watch();var r;addEventListener('resize',function(){cancelAnimationFrame(r);r=requestAnimationFrame(fit)})})();</script>
 </body>
 </html>
