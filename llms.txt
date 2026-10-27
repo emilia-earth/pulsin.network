@@ -1,6 +1,6 @@
 # Pulsin Network
 
-> Pulsin Network is a network of independent hubs (physical spaces such as co-livings, makerspaces, hacker houses and regenerative villages) across Europe and Latin America. Hubs share what they know, test what works and back each other up, so no one has to carry the weight of running a physical space alone.
+> Pulsin Network is a network of independent hubs (physical spaces such as co-livings, makerspaces, hacker houses and regenerative villages) around the world. Hubs share what they know, test what works and back each other up, so no one has to carry the weight of running a physical space alone.
 
 What the network does together:
 
